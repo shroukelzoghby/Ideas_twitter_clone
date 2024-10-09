@@ -29,6 +29,22 @@ This project is a simplified clone of Twitter, built with Laravel. It mimics cor
 - **Follow and Unfollow Users**   
   Build your own social circle by following and unfollowing users
 ---
+
+## Prerequisites
+
+Before running the project locally, make sure you have the following installed:
+
+### 1. **PHP 8.1 or higher**: [Download PHP](https://www.php.net/downloads)
+### 2. **Composer**: Dependency manager for PHP [Download Composer](https://getcomposer.org/download/)
+### 3. **Database**: MySQL or PostgreSQL recommended
+- **MySQL**: [Download MySQL](https://www.mysql.com/downloads/)
+
+- **PostgreSQL**: [Download PostgreSQL](https://www.postgresql.org/download/)
+### 4. **Node.js & NPM**: Required for frontend dependency management [Download Node.js](https://nodejs.org/en/download/)
+### 5. **Git**: Version control system [Download Git](https://git-scm.com/)
+
+---
+
 ## Installation
 
 Follow these steps to set up and run the Twitter clone on your local machine.
