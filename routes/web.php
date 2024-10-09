@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\IdeaController;
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,6 +19,10 @@ Route::resource('ideas', IdeaController::class)
 
 Route::resource('ideas.comments', CommentController::class)
     ->only('store')
+    ->middleware('auth');
+
+Route::resource('users', userController::class)
+    ->only('show','edit','update')
     ->middleware('auth');
 
 
