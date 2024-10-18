@@ -14,6 +14,7 @@
                     @csrf
                     @method('delete')
                     <a class="mx-2" href="{{route('ideas.show',$idea->id)}}">View</a>
+
                     <a href="{{route('ideas.edit',$idea->id)}}">Edit</a>
                     <button class=" ms-1 btn btn-danger btn-sm">X</button>
                 </form>
