@@ -25,6 +25,8 @@ Route::resource('users', userController::class)
     ->only('show','edit','update')
     ->middleware('auth');
 
+Route::get('profile',[userController::class,'profile'])->name('profile')->middleware('auth');
+
 
 Route::get('/terms',function (){
     return view('terms');
