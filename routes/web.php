@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FeedController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\IdeaLikeController;
@@ -48,6 +49,8 @@ Route::post('ideas/{idea}/like',[IdeaLikeController::class,'like'])
 Route::post('ideas/{idea}/unlike',[IdeaLikeController::class,'unlike'])
     ->name('ideas.unlike')
     ->middleware('auth');
+
+Route::get('feed', FeedController::class)->middleware('auth')->name('feed');
 
 Route::get('/terms',function (){
     return view('terms');
