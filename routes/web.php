@@ -8,6 +8,9 @@ use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\IdeaLikeController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Middleware\EnsureUserIsAdmin as admin;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -55,3 +58,5 @@ Route::get('feed', FeedController::class)->middleware('auth')->name('feed');
 Route::get('/terms',function (){
     return view('terms');
 })->name('terms');
+
+Route::get('/admin', [AdminDashboardController::class, 'index'])->name('admin.dashboard')->middleware(['auth','admin']);
